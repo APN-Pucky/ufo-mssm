@@ -1,4 +1,4 @@
-import object_library
+from . import object_library
 
 from . import particles
 from . import couplings
@@ -18,14 +18,14 @@ all_orders = coupling_orders.all_orders
 all_functions = function_library.all_functions
 
 try:
-    import decays
+    from . import decays
 except ImportError:
     pass
 else:
     all_decays = decays.all_decays
 
 try:
-    import build_restrict
+    from . import build_restrict
 except ImportError:
     pass
 
